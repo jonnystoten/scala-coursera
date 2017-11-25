@@ -57,7 +57,7 @@ object FunSets {
   def forall(s: Set, p: Int => Boolean): Boolean = {
     val t = diff(s, p)
     def iter(a: Int): Boolean = {
-      if (a >= bound) true
+      if (a > bound) true
       else if (t(a)) false
       else iter(a + 1)
     }
